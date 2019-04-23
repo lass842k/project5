@@ -13,6 +13,7 @@
     
     
     <body>
+    <progress id="progressBar" value="0" max=""></progress>
     <header>
     <div class="container">
         <div class="logo">
@@ -42,7 +43,7 @@
                 <button class="btn btn3">Ekspert</button>
                 
             <div class="swipeimg">
-                <img src="img/backpack.png" alt="Rygsæk med læderdetaljer">
+                <a href="indexslide.html"><img src="img/backpack.png" id="firstImage" alt="Rygsæk med læderdetaljer"></a>
             </div>
                 
                 <button class="btnicon btncancel">
@@ -57,5 +58,15 @@
                 </article>
             </div>
         </section>
+
+<script>
+        window.onload = function() {
+            let firstimg = document.getElementById("firstImage");
+            firstImage.style.opacity = "100";
+            firstImage.style.left = "0";
+}
+</script>
+       
+        <script src="js/main.js"></script>
     </body>
 </html>

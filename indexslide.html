@@ -11,10 +11,8 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     
-    
     <body>
     <progress id="progressBar" value="0" max=""></progress>
-    <script src="js/main.js"></script>
     <header>
     <div class="container">
         <div class="logo">
@@ -38,18 +36,40 @@
         
         <section id="main">
             <div class="container">
-                <article id="maincol"><br>
-                <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-                BRUGERNAVN<br> <input type="text" name="fname"><br>
-                ADGANGSKODE<br><input type="text" password="fname"><br><br>
-                <input type="submit" value="Log ind">
-            </form>
-               <p>Glemt brugernavn?<br>
-               Glemt adgangskode?<br>
-               Opret ny bruger</p>
-                    <a href="index.html"><button class="btn btn4">Skip</button></a>
+                <article id="maincol">
+                <div class="indexslideimg">
+            <img class="mySlides" src="img/backpack.png" style="width:100%">
+            <img class="mySlides" src="img/backpack1.jpg" style="width:100%">
+            <img class="mySlides" src="img/backpack2.jpg" style="width:100%">
+            <img class="mySlides" src="img/backpack3.jpg" style="width:100%">
+    
+        <button class="btn btn1" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="btn btn1" onclick="plusDivs(1)">&#10095;</button>
+</div>
                 </article>
             </div>
         </section>
+        
+<script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+}
+</script>
+       
+        <script src="js/main.js"></script>
     </body>
 </html>
